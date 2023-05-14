@@ -1,0 +1,197 @@
+import './TabelaReferencia.scss'
+
+export const TabelaReferencia = () => {
+    return (
+        <div className='table-responsive row'>
+            <div className='col'>
+            <table className='table table-bordered table-striped'>
+                <caption>IMC - Índice de massa corporal</caption>
+                <thead className='table-light'>
+                <tr>
+                    <th scope='col'>IMC</th>
+                    <th scope='col'>Classificação</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>menor que 17</td>
+                    <td>Muito abaixo do peso</td>
+                </tr>
+                <tr>
+                    <td>17,1 a 18,49</td>
+                    <td>Abaixo do peso</td>
+                </tr>
+                <tr>
+                    <td>18,6 a 24,99</td>
+                    <td>Peso Normal</td>
+                </tr>
+                <tr>
+                    <td>24,1 a 29,99</td>
+                    <td>Acima do peso</td>
+                </tr>
+                <tr>
+                    <td>30,1 a 34,99</td>
+                    <td>Obesidade I</td>
+                </tr>
+                <tr>
+                    <td>35,1 a 39,99</td>
+                    <td>Obesidade II - Severa</td>
+                </tr>
+                <tr>
+                    <td>Maior que 40</td>
+                    <td>Obesidade III - Mórbida</td>
+                </tr>
+                </tbody>
+            </table>
+            </div>
+
+            <div className='col'>
+                <table className='table table-bordered table-striped'>
+                    <caption>Percentual de Gordura (G%) para homens</caption>
+                    <thead className='table-light'>
+                        <tr>
+                            <th scope='col'>Nível/Idade</th>
+                            <th scope='col'>18-25</th>
+                            <th scope='col'>26-35</th>
+                            <th scope='col'>36-45</th>
+                            <th scope='col'>46-55</th>
+                            <th scope='col'>56-65</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Excelente</td>
+                            <td>4% a 7%</td>
+                            <td>8% a 11%</td>
+                            <td>10% a 15%</td>
+                            <td>12% a 17%</td>
+                            <td>13% a 19%</td>
+                        </tr>
+                        <tr>
+                            <td>Bom</td>
+                            <td>8% a 11%</td>
+                            <td>12% a 15%</td>
+                            <td>16% a 18%</td>
+                            <td>18% a 20%</td>
+                            <td>20% a 21%</td>
+                        </tr>
+                        <tr>
+                            <td>Acima da Média</td>
+                            <td>4% a 7%</td>
+                            <td>8% a 11%</td>
+                            <td>10% a 15%</td>
+                            <td>12% a 17%</td>
+                            <td>13% a 19%</td>
+                        </tr>
+                        <tr>
+                            <td>Média</td>
+                            <td>4% a 7%</td>
+                            <td>8% a 11%</td>
+                            <td>10% a 15%</td>
+                            <td>12% a 17%</td>
+                            <td>13% a 19%</td>
+                        </tr>
+                        <tr>
+                            <td>Abaixo da Média</td>
+                            <td>4% a 7%</td>
+                            <td>8% a 11%</td>
+                            <td>10% a 15%</td>
+                            <td>12% a 17%</td>
+                            <td>13% a 19%</td>
+                        </tr>
+                        <tr>
+                            <td>Ruim</td>
+                            <td>4% a 7%</td>
+                            <td>8% a 11%</td>
+                            <td>10% a 15%</td>
+                            <td>12% a 17%</td>
+                            <td>13% a 19%</td>
+                        </tr>
+                        <tr>
+                            <td>Muito Ruim</td>
+                            <td>4% a 7%</td>
+                            <td>8% a 11%</td>
+                            <td>10% a 15%</td>
+                            <td>12% a 17%</td>
+                            <td>13% a 19%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div className='col'>
+            <table className='table table-bordered table-striped'>
+                    <caption>Percentual de Gordura (G%) para mulheres</caption>
+                    <thead className='table-light'>
+                        <tr>
+                            <th scope='col'>Nível/Idade</th>
+                            <th scope='col'>18-25</th>
+                            <th scope='col'>26-35</th>
+                            <th scope='col'>36-45</th>
+                            <th scope='col'>46-55</th>
+                            <th scope='col'>56-65</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Excelente</td>
+                            <td>4% a 7%</td>
+                            <td>8% a 11%</td>
+                            <td>10% a 15%</td>
+                            <td>12% a 17%</td>
+                            <td>13% a 19%</td>
+                        </tr>
+                        <tr>
+                            <td>Bom</td>
+                            <td>4% a 7%</td>
+                            <td>8% a 11%</td>
+                            <td>10% a 15%</td>
+                            <td>12% a 17%</td>
+                            <td>13% a 19%</td>
+                        </tr>
+                        <tr>
+                            <td>Acima da Média</td>
+                            <td>4% a 7%</td>
+                            <td>8% a 11%</td>
+                            <td>10% a 15%</td>
+                            <td>12% a 17%</td>
+                            <td>13% a 19%</td>
+                        </tr>
+                        <tr>
+                            <td>Média</td>
+                            <td>4% a 7%</td>
+                            <td>8% a 11%</td>
+                            <td>10% a 15%</td>
+                            <td>12% a 17%</td>
+                            <td>13% a 19%</td>
+                        </tr>
+                        <tr>
+                            <td>Abaixo da Média</td>
+                            <td>4% a 7%</td>
+                            <td>8% a 11%</td>
+                            <td>10% a 15%</td>
+                            <td>12% a 17%</td>
+                            <td>13% a 19%</td>
+                        </tr>
+                        <tr>
+                            <td>Ruim</td>
+                            <td>4% a 7%</td>
+                            <td>8% a 11%</td>
+                            <td>10% a 15%</td>
+                            <td>12% a 17%</td>
+                            <td>13% a 19%</td>
+                        </tr>
+                        <tr>
+                            <td>Muito Ruim</td>
+                            <td>4% a 7%</td>
+                            <td>8% a 11%</td>
+                            <td>10% a 15%</td>
+                            <td>12% a 17%</td>
+                            <td>13% a 19%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+      </div>
+    )
+}
