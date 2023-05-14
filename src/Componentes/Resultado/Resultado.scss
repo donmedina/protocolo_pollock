@@ -1,0 +1,26 @@
+.item strong {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    background-color:green ;
+    font-weight: 700;
+    color: #FFF;
+    text-align: center;
+}
+
+.item label{
+    font-weight: 700;
+    text-align: center;
+}
+.item{
+    border: 2px solid;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.item h3{
+    text-align: center;
+}
