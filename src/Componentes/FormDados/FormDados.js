@@ -23,21 +23,40 @@ export const FormDados = (props) => {
 
     const avaliar = (e)=>{
         e.preventDefault()
+        
+        const imc    = (parseInt(peso)/(parseInt(altura)/100)**2).toFixed(2)
+    
+        const soma5H = parseInt(peitoral) + parseInt(abdominal) + parseInt(coxa)
+        const soma5M = parseInt(triceps) + parseInt(suprailiaca) + parseInt(coxa)
+        const dc5H   = 1.1093800 - (0.0008267 * soma5H) + (0.0000016 * (soma5H**2)) - (0.0002574 * parseInt(idade))
+        const dc5M   = 1.0994921 - (0.0009929 * soma5M) + (0.0000023 * (soma5M**2)) - (0.0001392 * parseInt(idade))
+        const pG5H   = (((4.95/dc5H) - 4.50) * 100).toFixed(2)
+        const pG5M   = (((4.95/dc5M) - 4.50) * 100).toFixed(2)
+    
+        const soma7  = parseInt(subescapular) + parseInt(axilar) + parseInt(triceps) + parseInt(coxa) + parseInt(suprailiaca) + parseInt(abdominal) + parseInt(peitoral)
+        const dc7H   = 1.11200000 - (0.00043499 * soma7) + (0.00000055 * (soma7**2)) - (0.0002882 * parseInt(idade))
+        const dc7M   = 1.0970 - (0.00046971 * soma7) + (0.00000056 * (soma7**2)) - (0.00012828 * parseInt(idade))
+        const pG7H   = (((4.95/dc7H) - 4.50) * 100).toFixed(2)
+        const pG7M   = (((4.95/dc7M) - 4.50) * 100).toFixed(2)
+    
+        const pesoGorduraH = ((pG7H / 100) * parseInt(peso)).toFixed(2)
+        const pesoGorduraM = ((pG7M / 100) * parseInt(peso)).toFixed(2)
+        const lbmH         = parseInt(peso) - pesoGorduraH
+        const lbmM         = parseInt(peso) - pesoGorduraM
+
+        const pG5   = (sexo === 'Masculino') ? pG5H : pG5M
+        const pG7   = (sexo === 'Masculino') ? pG7H : pG7M
+        const pesoG = (sexo === 'Masculino') ? pesoGorduraH : pesoGorduraM 
+        const lbm   = (sexo === 'Masculino') ? lbmH : lbmM
+
+        
+        
         props.aoAvaliar({
-            idade,
-            altura,
-            peso,
-            sexo,
-            biceps,
-            subescapular,
-            suprailiaca,
-            abdominal,
-            supraespinhal,
-            coxa,
-            panturrilha,
-            peitoral,
-            axilar,
-            triceps
+            imc,
+            pG5,
+            pG7,
+            pesoG,
+            lbm
         })
         
         setIdade('')
@@ -65,8 +84,8 @@ export const FormDados = (props) => {
                         label       = 'Idade'
                         placeholder = 'Digite sua idade...'
                         obrigatorio = {true}
-                        aoAlterado  = {valor => setIdade(valor)}
                         valor       = {idade}
+                        aoAlterado  = {valor => setIdade(valor)}
                         />
                     </div>
                     <div className='col'>
@@ -74,8 +93,8 @@ export const FormDados = (props) => {
                         label = 'Altura'
                         placeholder = 'Digite sua altura em cm (ex.: 174 cm )...'
                         obrigatorio = {true}
-                        aoAlterado  = {valor => setAltura(valor)}
                         valor       = {altura} 
+                        aoAlterado  = {valor => setAltura(valor)}
                         />
                     </div>
                 </div>

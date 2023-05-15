@@ -13,6 +13,7 @@ export const CampoTexto = (props) => {
                 placeholder = {props.placeholder}
                 required    = {props.obrigatorio}
                 onChange    = {aoDigitado}
+                value       = {props.valor}
             />
         </div>
     )

@@ -1,30 +1,25 @@
 import './Resultado.scss'
+import ItemResultado from '../ItemResultado'
 
 export const Resultado = (props) => {
+
     return (
+        (props.resultado.length > 0) &&
         <div className='container'>
             <div className='item row'>
                 <h3>Resultados da avaliação</h3>
-                <div className='col'>
-                    <label>IMC</label>
-                    <strong>{props.resultado['imc']}</strong>
-                </div>
-                <div className='col'>
-                    <label>%G 5 dobras</label>
-                    <strong>{props.resultado['pG5H']}</strong>
-                </div>
-                <div className='col'>
-                    <label>%G 7 dobras</label>
-                    <strong>{props.resultado['pG5H']}</strong>
-                </div>
-                <div className='col'>
-                    <label>Peso de Gordura</label>
-                    <strong>{props.resultado['pesoGorduraH']}</strong>
-                </div>
-                <div className='col'>
-                    <label>Peso Massa Magra</label>
-                    <strong>{props.resultado['lbmH']}</strong>
-                </div>
+                {props.resultado.map(item => 
+                    <ItemResultado
+                        key   = 'resultado' 
+                        imc   = {item.imc}
+                        pG5  = {item.pG5}
+                        pG7  = {item.pG7}
+                        pesoG = {item.pesoG}
+                        lbm   = {item.lbm}
+                    />
+                )}
+                
+
             </div>
         </div>
     )

@@ -3,24 +3,27 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100px;
+    width: 50%;
     height: 100px;
     background-color:green ;
     font-weight: 700;
     color: #FFF;
-    
+    margin-left: 25%;
+    margin-bottom: 18px;
+    font-size: 24px;
 }
 
 
 .item label{
     font-weight: 700;
-    
+    margin-bottom: 12px;
 }
 .item{
     border: 2px solid;
     padding: 8px;
     border-radius: 10px;
     margin: 0;
+    text-align: center;
 }
 
 .item h3{
