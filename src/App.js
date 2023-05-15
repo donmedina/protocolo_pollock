@@ -4,6 +4,7 @@ import Banner from './Componentes/Banner';
 import FormDados from "./Componentes/FormDados";
 import TabelaReferencia from './Componentes/TabelaReferencia';
 import Resultado from './Componentes/Resultado';
+import Rodape from './Componentes/Rodape';
 
 
 function App() {
@@ -42,6 +43,10 @@ function App() {
           <FormDados 
             aoAvaliar = {avaliacao => avalicaoFisica(avaliacao)}
           />
+        </div>
+
+        <div className='row'>
+          <Rodape />
         </div>
 
       </div>
