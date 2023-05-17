@@ -9,7 +9,7 @@ Esse projeto foi desenvolvido, para profissionais da area de Educação Física,
 | :rocket: URL         | https://protocolo-pollock.vercel.app
 
 
-![](https://i.imgur.com/lmQ2KSq.png?text=imagem+lindona+do+meu+projeto#vitrinedev)
+![](https://i.imgur.com/lmQ2KSq.png?text=ficha-de-avaliação#vitrinedev)
 
 ## Detalhes do projeto
 Através do formulário é possível inserir todos os parâmetros de avaliação:
